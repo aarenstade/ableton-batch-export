@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ableton-batch-export"
+version = "0.1.0"
+description = "Resumable Ableton Live catalog exports with relinked working copies on macOS"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+dependencies = [
+    "abletoolz==2.1.0",
+    "numpy>=2,<3",
+    "pyobjc-framework-Cocoa==12.2.2; sys_platform == 'darwin'",
+    "pyobjc-framework-ApplicationServices==12.2.2; sys_platform == 'darwin'",
+    "pyobjc-framework-Quartz==12.2.2; sys_platform == 'darwin'",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: MacOS :: MacOS X",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+
+[project.scripts]
+ableton-export = "ableton_export.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

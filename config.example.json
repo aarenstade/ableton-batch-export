@@ -1,0 +1,12 @@
+{
+  "project_roots": ["/Volumes/Music/Projects"],
+  "sample_roots": ["/Volumes/Music"],
+  "output_root": "/Volumes/Music/Batch Renders",
+  "app_path": "/Applications/Ableton Live 12 Standard.app",
+  "state_path": "state.sqlite3",
+  "runtime_state_root": "run-state",
+  "unattended_mode": true,
+  "sample_rate": 44100,
+  "bit_depth": 16,
+  "tail_beats": 8
+}
